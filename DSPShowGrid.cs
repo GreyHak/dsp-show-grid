@@ -15,7 +15,13 @@ using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
 using UnityEngine;
+using System.Security;
+using System.Security.Permissions;
 
+[module: UnverifiableCode]
+#pragma warning disable CS0618 // Type or member is obsolete
+[assembly: SecurityPermission(SecurityAction.RequestMinimum, SkipVerification = true)]
+#pragma warning restore CS0618 // Type or member is obsolete
 namespace DSPShowGrid
 {
     [BepInPlugin(pluginGuid, pluginName, pluginVersion)]
@@ -38,13 +44,13 @@ namespace DSPShowGrid
             harmony.PatchAll(typeof(DSPShowGrid));
         }
 
-        [HarmonyPrefix, HarmonyPatch(typeof(UIBuildingGrid), "Update")]
-        public static void UIBuildingGrid_Update_Prefix(UIBuildingGrid __instance)
+        [HarmonyPostfix, HarmonyPatch(typeof(UIBuildingGrid), "Update")]
+        public static void UIBuildingGrid_Update_Postfix(UIBuildingGrid __instance)
         {
             if (GameMain.mainPlayer != null)
             {
-                __instance.material.SetFloat("_ZMin", -10f);
-                __instance.material.SetFloat("_ZMax", 10f);
+                __instance.material.SetFloat("_ZMin", -3f);  // Mountains
+                __instance.material.SetFloat("_ZMax", 8f);   // Oceans
             }
         }
     }
