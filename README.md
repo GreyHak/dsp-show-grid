@@ -2,7 +2,7 @@
 
 **DSP Show Grid** is a mod for the Unity game Dyson Sphere Program developed by Youthcat Studio and published by Gamera Game.  The game is available on [here](https://store.steampowered.com/app/1366540/Dyson_Sphere_Program/).
 
-Shows the planet grid regardless of ground elevation.
+Shows the planet grid regardless of ground elevation.  Shows the grids in the deep oceans and high mountains.  Works with the build tool, destruction tool, foundation tool, and upgrade tool.
 
 If you like this mod, please click the thumbs up at the [top of the page](https://dsp.thunderstore.io/package/GreyHak/DSP_Show_Grid/) (next to the Total rating).  That would be a nice thank you for me, and help other people to find a mod you enjoy.
 
