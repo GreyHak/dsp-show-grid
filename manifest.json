@@ -1,0 +1,9 @@
+{
+    "name": "DSP_Show_Grid",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/GreyHak/dsp-show-grid",
+    "description": "Shows the planet grid regardless of ground elevation.",
+    "dependencies": [
+        "xiaoye97-BepInEx-5.4.5"
+    ]
+}
